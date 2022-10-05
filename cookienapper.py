@@ -18,7 +18,7 @@ def get_cookies():
 	du = debuggerurls[-1]
 	c = subprocess.check_output("wscat --connect "+ du +" -x '{\"id\":1, \"method\":\"Network.getAllCookies\"}'", shell=True)
 	response = json.loads(c)
-	cookies = response['result']['cookies'
+	cookies = response['result']['cookies']
 	
 	return cookies
 
